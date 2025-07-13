@@ -21,7 +21,7 @@ def display_text(stdscr,target_text,current_text,wpm=0):
        
             stdscr.addstr(0,i,char,color)
 def load_text():
-    with open("python-middium-lvl-projects-/typing_test.txt", "r") as f:
+    with open("typing_test.txt", "r") as f:
         target_text = f.read()
     return random.choice(target_text.split("\n")) if target_text else target_text
 

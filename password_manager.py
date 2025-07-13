@@ -8,14 +8,14 @@ from cryptography.fernet import Fernet
 # write_key()
 
 def load_key():
-    with open("python-middium-lvl-projects-/key.key", "rb") as file:
+    with open("key.key", "rb") as file:
         return file.read()
 
 key = load_key()
 fer = Fernet(key)
 
 def view():
-    with open("python-middium-lvl-projects-/password.text", 'r') as f:
+    with open("password.text", 'r') as f:
         for line in f:
             data = line.strip()
             if not data:
@@ -36,7 +36,7 @@ def add():
     user = input("Enter username: ")
     password = input("Enter password: ")
     encrypted = fer.encrypt(password.encode()).decode()
-    with open("python-middium-lvl-projects-/password.text", "a") as f:
+    with open("password.text", "a") as f:
         f.write(f"{site}|{user}|{encrypted}\n")
     print("Password added successfully.")
 

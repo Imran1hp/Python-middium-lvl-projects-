@@ -1,4 +1,4 @@
-with open ("python-middium-lvl-projects-/madlibs_story.txt","r") as f:
+with open ("madlibs_story.txt","r") as f:
     story =f.read()
 
 words=set()
