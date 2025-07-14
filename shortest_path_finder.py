@@ -50,9 +50,7 @@ def find_path(maze,stdscr):
     start_pos = find_start(maze,start)
     q = queue.Queue()
     q.put((start_pos,[start_pos]))
-
     visited = set()
-
     while not q.empty():
         current_pos, path = q.get()
         row,col = current_pos
@@ -78,8 +76,6 @@ def find_path(maze,stdscr):
             visited.add(neighbor)
 
         
-
-
 def find_neighbors(maze,row,col):
     neighbors =[]
 
@@ -94,17 +90,10 @@ def find_neighbors(maze,row,col):
     return neighbors           
 
 
-
-
-
-
-
 def main (stdscr):
     curses.init_pair(1, curses.COLOR_BLUE,curses.COLOR_BLACK)
     curses.init_pair(2,curses.COLOR_RED,curses.COLOR_BLACK)
     find_path(maze,stdscr)
-    stdscr.addstr(20,0,"You found the exit!")
     stdscr.getch()
-
 
 wrapper(main)
