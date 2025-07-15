@@ -50,7 +50,7 @@ def find_path(maze,stdscr):
     start_pos = find_start(maze,start)
     q = queue.Queue()
     q.put((start_pos,[start_pos]))
-    visited = set()
+    visited = set(start)
     while not q.empty():
         current_pos, path = q.get()
         row,col = current_pos
