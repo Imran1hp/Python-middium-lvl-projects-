@@ -1,6 +1,6 @@
 from yt_dlp import YoutubeDL
 
-url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+url = "https://www.youtube.com/watch?v=03uDc9m4NcQ&list=RD03uDc9m4NcQ&start_radio=1"
 
 ydl_opts = {
     # This tells yt-dlp to pick the best video+audio combined stream
